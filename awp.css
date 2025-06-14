@@ -1,0 +1,268 @@
+/* Theme: AWP */
+/* Made by Ryp */
+
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Define root variables for AWP Theme */
+:root {
+  --awp-font-size: 14px;
+  --awp-font-family: 'Inter', sans-serif;
+  --awp-background-color: #1f1f1f;
+  --awp-secondary-bg: #202020;
+  --awp-border-color: #2c2c2c;
+  --awp-text-primary: #808080;
+  --awp-text-secondary: #a0a0a0;
+  --awp-control-bg: #282828;
+  --awp-control-border: #2c2c2c;
+  --awp-control-hover-bg: #323232;
+  --awp-corner-radius: 8px;
+  --awp-border-size: 2px;
+  --awp-text-active: #c5c5c5;
+  --awp-monaco-background: #1b1b1b;
+}
+
+.custom-theme-active .editor-container {
+  font-family: var(--awp-font-family);
+  font-size: var(--awp-font-size);
+  background: var(--awp-background-color);
+  border: 1px solid #454545;
+}
+
+.custom-theme-active .top-bar {
+  height: 36px;
+  background: var(--awp-background-color);
+  border: 0;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 12px;
+  justify-content: start;
+  justify-items: end;
+  padding-top: 4px;
+}
+
+.custom-theme-active .top-controls .icon-button {
+  margin-right: -12px;
+}
+
+.custom-theme-active .window-controls .icon-button {
+  color: var(--awp-text-active);
+  scale: 1.25;
+}
+
+.custom-theme-active .theme-indicator {
+  display: none !important;
+}
+
+.custom-theme-active .logo {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: -4px;
+}
+
+.custom-theme-active .tabs-bar {
+  padding: 0 4px;
+  height: 40px;
+  background: var(--awp-background-color);
+  border-bottom: var(--awp-border-size) solid var(--awp-border-color);
+  overflow-y: hidden;
+}
+
+.custom-theme-active .tabs-bar .close-tab {
+  scale: 1.25;
+  color: var(--awp-text-primary);
+}
+
+.custom-theme-active .tabs-bar .new-tab {
+  color: var(--awp-text-primary);
+  order: -999999999 !important;
+  border-radius: 4px;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+}
+.custom-theme-active .tabs-bar .new-tab .lucide {
+  scale: 1.1;
+}
+
+.custom-theme-active .tab {
+  font-family: var(--awp-font-family) !important;
+  font-size: 14px;
+  font-weight: 400;
+  background: transparent;
+  color: var(--awp-text-primary);
+  border-radius: 4px;
+  margin: 0 0 0 4px !important;
+  padding: 0 8px;
+  height: 32px;
+  border: var(--awp-border-size) solid transparent;
+  transition: all 0.1s ease-out;
+}
+.custom-theme-active .tab .tab-name {
+  text-align: left;
+  font-family: var(--awp-font-family) !important;
+}
+.custom-theme-active .tab:hover {
+  color: var(--awp-text-active);
+  background: var(--awp-control-hover-bg);
+}
+.custom-theme-active .tab.active {
+  color: var(--awp-text-active);
+  background: var(--awp-control-bg);
+  border: var(--awp-border-size) solid var(--awp-control-border);
+}
+
+.custom-theme-active .bottom-bar {
+  height: 40px;
+  padding: 0 8px 0 4px;
+  background: var(--awp-background-color);
+  border: 0;
+}
+
+.custom-theme-active .action-button {
+  font-size: var(--awp-font-size);
+  background: var(--awp-control-bg);
+  color: var(--awp-text-primary);
+  border: var(--awp-border-size) solid var(--awp-control-border);
+  border-radius: 4px;
+  margin: 0 -4px 0 0;
+  padding: 0 8px;
+  height: 28px;
+  transition: all 0.1s ease-out;
+}
+
+.custom-theme-active .action-button:hover {
+  background: var(--awp-control-hover-bg);
+  color: var(--awp-text-active);
+}
+
+.custom-theme-active .action-button.connected {
+  background: var(--awp-accent-color);
+  color: #000000;
+  border-color: var(--awp-accent-color);
+  font-weight: 600;
+}
+
+.custom-theme-active .action-button.connected:hover {
+  background: var(--awp-accent-hover);
+  border-color: var(--awp-accent-hover);
+}
+
+.custom-theme-active .scripts-panel {
+  position: relative;
+  z-index: 999;
+  width: 180px;
+  background: var(--awp-background-color);
+  border-left: 2px solid var(--awp-border-color);
+}
+.custom-theme-active .settings-panel {
+  background: var(--awp-background-color);
+  border: 1px solid #454545;
+  border-top: 0;
+  z-index: 999;
+  position: fixed;
+  top: 36px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 36px)
+}
+
+.custom-theme-active .search-box {
+  border: 0;
+  margin: -4px 0 2px 2px;
+}
+
+.custom-theme-active .search-box input {
+  margin-left: -28px;
+  margin-right: -4px;
+  height: 28px;
+  padding-left: 26px;
+  pointer-events: visible;
+  height: 32px;
+  width: 0;
+  background: var(--awp-control-bg);
+  border: 2px solid var(--awp-control-border);
+  border-radius: 4px;
+  color: var(--awp-text-active);
+  font-family: var(--awp-font-family) !important;
+  font-size: 14px;
+}
+.custom-theme-active .search-box .lucide {
+  z-index: 2;
+  color: var(--awp-text-primary);
+}
+
+.custom-theme-active .search-box input::placeholder {
+  color: var(--awp-text-primary);
+}
+
+.custom-theme-active .search-box input:focus {
+  border-color: var(--awp-accent-hover);
+  border: 2px solid var(--awp-control-border);
+}
+
+.custom-theme-active .scripts-list {
+  margin-top: -6px;
+}
+
+.custom-theme-active .scripts-list li {
+  color: var(--awp-text-primary);
+  font-family: var(--awp-font-family);
+  font-size: 14px;
+  padding: 1px 8px;
+  background: your-item-background;
+  transition: all 0.1s ease-out;
+}
+
+.custom-theme-active .scripts-list li:hover {
+  background: var(--awp-control-hover-bg);
+  color: var(--awp-text-active);
+}
+
+.custom-theme-active .editor-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 200px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0px;
+  box-shadow: inset 0px 0px 24px 0px rgba(0,0,0,0.25);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.custom-theme-active .monaco-editor .monaco-editor-background {
+  background: var(--awp-monaco-background) !important;
+}
+
+.custom-theme-active .monaco-editor .minimap {
+  border: 0px !important;
+}
+
+.custom-theme-active .monaco-editor .line-numbers {
+  color: #ffffff !important;
+}
+
+.custom-theme-active .monaco-editor .current-line {
+  background: #1f1f1f !important;
+  border: 2px solid #232323 !important;
+}
+
+.custom-theme-active .notification {
+  background: var(--awp-background-color);
+  backdrop-filter: blur(10px);
+  border-radius: var(--awp-corner-radius);
+  border: 1px solid var(--awp-border-color);
+  box-shadow: var(--awp-shadow);
+  color: var(--awp-text-primary);
+}
+
+/* .custom-theme-active .notification.success{ border-left: 4px solid #34ff30; }
+.custom-theme-active .notification.error { border-left: 4px solid #ff3030; }
+.custom-theme-active .notification.warning { border-left: 4px solid #ff8d30; } */
