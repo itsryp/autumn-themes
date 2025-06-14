@@ -41,13 +41,21 @@
   padding-top: 4px;
 }
 
+.custom-theme-active .top-controls {
+  gap: 8px;
+}
 .custom-theme-active .top-controls .icon-button {
-  margin-right: -12px;
+  scale: 1.1;
+  border-radius: 4px;
 }
 
+.custom-theme-active .window-controls {
+  gap: 8px;
+}
 .custom-theme-active .window-controls .icon-button {
   color: var(--awp-text-active);
-  scale: 1.25;
+  scale: 1.1;
+  border-radius: 4px;
 }
 
 .custom-theme-active .theme-indicator {
