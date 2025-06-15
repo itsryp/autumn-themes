@@ -128,6 +128,7 @@
   padding: 0 8px 0 4px;
   background: var(--awp-background-color);
   border: 0;
+  border-top: var(--awp-border-size) solid var(--awp-border-color);
 }
 
 .custom-theme-active .action-button {
@@ -147,22 +148,22 @@
   color: var(--awp-text-active);
 }
 
-.custom-theme-active .action-button.connected {
-  background: var(--awp-accent-color);
-  color: #000000;
-  border-color: var(--awp-accent-color);
-  font-weight: 600;
+.custom-theme-active .action-button.connecting {
+    opacity: 0.5;
+    color: #ffae45;
+    pointer-events: none;
 }
 
-.custom-theme-active .action-button.connected:hover {
-  background: var(--awp-accent-hover);
-  border-color: var(--awp-accent-hover);
+.custom-theme-active .action-button.connected {
+    opacity: 0.5;
+    color: #80ff45;
+    pointer-events: none;
 }
 
 .custom-theme-active .scripts-panel {
-  position: relative;
   z-index: 999;
-  width: 180px;
+  position: relative;
+  width: 25%;
   background: var(--awp-background-color);
   border-left: 2px solid var(--awp-border-color);
 }
@@ -230,6 +231,10 @@
   color: var(--awp-text-active);
 }
 
+.custom-theme-active .editor-wrapper {
+  width: 75% !important;
+}
+
 .custom-theme-active .editor-wrapper::after {
   content: '';
   position: absolute;
@@ -251,6 +256,10 @@
 
 .custom-theme-active .monaco-editor .minimap {
   border: 0px !important;
+}
+
+.custom-theme-active .monaco-editor .margin {
+  background: var(--awp-monaco-background) !important;
 }
 
 .custom-theme-active .monaco-editor .line-numbers {
