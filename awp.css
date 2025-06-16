@@ -77,7 +77,24 @@
   background: var(--awp-background-color);
   border-bottom: var(--awp-border-size) solid var(--awp-border-color);
   overflow-y: hidden;
+  overflow-x: auto;
+  align-items: start;
+  padding-top: 3px;
 }
+
+.custom-theme-active .tabs-bar::after {
+  content: '';
+  background: var(--awp-background-color);
+  height: 32px;
+  width: 40px;
+  position: fixed;
+  right: 1px;
+}
+
+/* .custom-theme-active .tabs-bar:hover {
+  overflow-x: auto;
+  height: 48px;
+} */
 
 .custom-theme-active .tabs-bar .close-tab {
   scale: 1.25;
@@ -86,12 +103,20 @@
 
 .custom-theme-active .tabs-bar .new-tab {
   color: var(--awp-text-primary);
-  order: -999999999 !important;
+  position: sticky;
+  right: 0;
+  z-index: 2;
+  background: var(--awp-background-color);
   border-radius: 4px;
   width: 32px !important;
   height: 32px !important;
   padding: 0 !important;
 }
+
+.custom-theme-active .tabs-bar .new-tab:hover {
+  background: var(--awp-control-hover-bg)
+}
+
 .custom-theme-active .tabs-bar .new-tab .lucide {
   scale: 1.1;
 }
@@ -103,11 +128,12 @@
   background: transparent;
   color: var(--awp-text-primary);
   border-radius: 4px;
-  margin: 0 0 0 4px !important;
+  margin: 0 4px 0 0 !important;
   padding: 0 8px;
   height: 32px;
   border: var(--awp-border-size) solid transparent;
   transition: all 0.1s ease-out;
+  min-width: min-content !important;
 }
 .custom-theme-active .tab .tab-name {
   text-align: left;
@@ -260,6 +286,7 @@
 
 .custom-theme-active .monaco-editor .margin {
   background: var(--awp-monaco-background) !important;
+  contain: strict !important;
 }
 
 .custom-theme-active .monaco-editor .line-numbers {
