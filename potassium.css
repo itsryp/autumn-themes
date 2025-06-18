@@ -1,0 +1,254 @@
+/*Theme: Potassium*/
+/* Made by Ryp */
+
+:root {
+    --pot-monaco: #1a1a1a;
+    --pot-bg: #181818;
+    --pot-primary: #ffffff;
+    --pot-border: #303030;
+    --pot-secondary: #aaaaaa;
+    --pot-font: sans-serif;
+}
+
+.custom-theme-active .editor-container {
+    border: 1px solid var(--pot-border);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-rendering: optimizeLegibility;
+    background: var(--pot-bg);
+    background-image: url(https://t4.ftcdn.net/jpg/09/38/73/69/360_F_938736908_gQx6C7wDArfvkVL7RTAJyJI07GogXXLq.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+}
+
+/* top bar */
+.custom-theme-active .top-bar {
+    height: 40px;
+    background: transparent;
+    padding: 0 0 0 8px;
+    border: 0;
+}
+.custom-theme-active .logo {
+    font-family: var(--pot-font);
+    font-weight: 400;
+    color: var(--pot-secondary);
+    font-size: 15px;
+}
+.custom-theme-active .theme-indicator {
+    display: none;
+}
+.custom-theme-active .top-controls {
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.custom-theme-active .top-controls .icon-button {
+    background: transparent;
+    height: 40px;
+    width: 20px;
+    border-radius: 0px;
+    color: var(--pot-secondary);
+    border: 0;
+    transition: none;
+}
+.custom-theme-active .top-controls .icon-button .lucide {
+    scale: 1.6;
+}
+.custom-theme-active .top-controls .icon-button.active {
+    background: transparent;
+    color: var(--pot-primary);
+    border-bottom: 2px solid white;
+}
+.custom-theme-active .window-controls {
+    gap: 0;
+}
+.custom-theme-active .window-controls .icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+}
+.custom-theme-active .window-controls .lucide {
+    scale: 1.1;
+}
+
+/* tabs */
+.custom-theme-active .tabs-bar {
+    background: transparent;
+    border: 0;
+    height: 40px;
+    padding: 0;
+    border-bottom: 1px solid var(--pot-border);
+    overflow-y: hidden;
+    gap: 2px;
+}
+
+.custom-theme-active .tabs-bar .new-tab {
+    height: 24px;
+    width: 24px;
+    background: transparent;
+}
+.custom-theme-active .tabs-bar .new-tab .lucide {
+    scale: 1.25;
+}
+
+/* tab appearance */
+.custom-theme-active .tabs-bar .close-tab {
+    scale: 1.5;
+    color: #d3d3d3 !important;
+}
+.custom-theme-active .tab {
+    height: 40px;
+    background: #2a2a2a;
+    border: 0;
+    opacity: .5;
+    padding: 8px;
+    min-width: fit-content;
+    transition: all 0.1s ease-out;
+}
+.custom-theme-active .tab:hover {
+    opacity: .75;
+}
+.custom-theme-active .tab::before {
+    content: '';
+    background-image: url(https://api.iconify.design/bxs:quote-left.svg?color=%23d3d3d3);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+}
+.custom-theme-active .tab.active {
+    background: #2a2a2a;
+    opacity: 1.0;
+}
+.custom-theme-active .tab .lucide-code {
+    display: none;
+}
+.custom-theme-active .tab .tab-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: #d3d3d3;
+    font-size: 15px;
+}
+
+/* monaco appearance */
+.custom-theme-active .editor-wrapper {
+    width: 75%;
+    margin-left: -1px;
+}
+.custom-theme-active .monaco-editor .monaco-editor-background {
+    background: var(--pot-monaco) !important;
+}
+.custom-theme-active .monaco-editor .margin {
+    background: var(--pot-monaco) !important;
+}
+.custom-theme-active .monaco-editor .current-line {
+    background: var(--pot-monaco) !important;
+}
+.custom-theme-active .monaco-editor .line-numbers {
+    font-size: 14px !important;
+}
+
+/* bottom bar + buttons */
+.custom-theme-active .bottom-bar {
+    border: 0;
+    border-top: 1px solid var(--pot-border);
+    background: #161616;
+    height: 44px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.custom-theme-active .bottom-bar div {
+    gap: 4px;
+}
+.custom-theme-active .action-button {
+    height: 32px;
+    border: 1px solid var(--pot-border);
+    background: linear-gradient(#212121, #1b1b1b);
+    width: 85px;
+    border-radius: 5px;
+    justify-content: center;
+    font-size: 15px;
+    color: #c0c0c0;
+    padding: 0;
+    transition: all 0.1s ease-out;
+}
+.custom-theme-active .action-button .lucide {
+    scale: 1.1;
+}
+.custom-theme-active .action-button:hover {
+    color: var(--pot-primary);
+}
+.custom-theme-active .action-button.connecting {
+    color: #ffc163;
+}
+.custom-theme-active .action-button.connected {
+    color: #67c261;
+}
+
+/* script panel */
+.custom-theme-active .scripts-panel {
+    position: relative;
+    width: 25%;
+    background: #1d1d1d;
+    border: 0;
+    border-left: 4px solid var(--pot-bg);
+}
+.custom-theme-active .scripts-panel .search-box {
+    padding: 4px;
+    height: 40px;
+    border: 0;
+}
+.custom-theme-active .scripts-panel .search-box .lucide {
+    position: absolute;
+    left: 12px;
+    scale: 1;
+    color: var(--pot-secondary);
+}
+.custom-theme-active .scripts-panel .search-box input {
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    background: #222222;
+    font-size: 14px;
+    color: var(--pot-secondary);
+}
+.custom-theme-active .scripts-panel .search-box input::placeholder {
+    color: transparent;
+}
+.custom-theme-active .scripts-list li {
+    padding: 3px 8px;
+    font-size: 14px;
+    color: #bfbfbf;
+}
+.custom-theme-active .scripts-list li .lucide-code {
+    color: #5a74a6;
+    display: none;
+}
+.custom-theme-active .scripts-list li::before {
+    content: '';
+    background-image: url(https://api.iconify.design/fluent:document-16-filled.svg?color=%235a74a6);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+}
+
+/* settings panel */
+.custom-theme-active .settings-panel {
+    position: fixed;
+    left: 0;
+    top: 40px;
+    height: calc(100vh - 40px);
+    width: 100%;
+    border: 1px solid var(--pot-border);
+    background: var(--pot-bg);
+}
